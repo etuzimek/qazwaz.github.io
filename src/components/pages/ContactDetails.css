@@ -1,0 +1,33 @@
+.contactDetails {
+  background-color: #242424;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #a98361;
+  padding: 10px;
+}
+.contactDetails p {
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 700px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .contactDetails {
+        padding-bottom: 300px;
+    }
+  .contactDetails > h2 {
+
+    text-align: center;
+    font-size: 2rem;
+
+  }
+  .contactDetails > p {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+}

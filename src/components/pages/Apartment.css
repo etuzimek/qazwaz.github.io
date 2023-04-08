@@ -1,0 +1,120 @@
+.apartment {
+  background-color: #242424;
+  height: 100%;
+}
+.apartment-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: left;
+  padding: 20px 30px 5px;
+  color: #a98361;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
+}
+.apartment p {
+  color: #a98361;
+  font-size: 12px;
+  text-align: left;
+  padding: 0 30px;
+}
+
+.apartment-wrapper img {
+  width: 230px;
+  height: 200px;
+  padding: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.box img {
+  background: #fff;
+  padding: 20px;
+  width: 800px;
+  height: 600px;
+}
+
+.box:target {
+  display: table;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1022px) {
+  .apartment-wrapper img {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    filter: grayscale(100%);
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .apartment-wrapper img:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 732px) and (max-width: 1021px) {
+  .apartment-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .apartment-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 582px) and (max-width: 731px) {
+  .apartment-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .apartment-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 438px) and (max-width: 581px) {
+  .apartment-wrapper img {
+    width: 100vh;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 437px) {
+  h1 {
+    font-size: 28px;
+  }
+  .apartment-wrapper img {
+    width: 100vh;
+    height: 300px;
+    object-fit: cover;
+  }
+}
